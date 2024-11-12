@@ -4,17 +4,17 @@
 
 
 <?php 
-include("template/head.php");
+include("head.php");
  ?>
 
 <body class="g-sidenav-show  bg-gray-100">
 
-  <?php include("pages/menu.php"); ?>
+  <?php include("menu.php"); ?>
 
   <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <!-- Navbar -->
 
-    <?php include("scripts/cards.php"); ?>
+    <?php include("../template/scripts/cards.php"); ?>
 
     <?php if (isset($_GET["r"])) {
       switch ($_GET["r"]) {
@@ -30,9 +30,6 @@ include("template/head.php");
         case "tarefas":
           include("scripts/tarefas.php");
           break;
-        case "entrar":
-          include("entrar.php");
-          break;
         case "perfil":
           include("perfil.php");
           break;
@@ -42,7 +39,7 @@ include("template/head.php");
 
       }
     } else {
-      include("template/entrar.php");
+      include("principal.php");
     }
   ?>
 </body>
