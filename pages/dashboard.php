@@ -4,12 +4,12 @@
 
 
 <?php 
-include("../template/head.php");
+include("template/head.php");
  ?>
 
 <body class="g-sidenav-show  bg-gray-100">
 
-  <?php include("menu.php"); ?>
+  <?php include("pages/menu.php"); ?>
 
   <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <!-- Navbar -->
@@ -28,33 +28,23 @@ include("../template/head.php");
           include("processos.php");
           break;
         case "tarefas":
-          include("tarefas.php");
+          include("scripts/tarefas.php");
           break;
-        case "resgistrar":
-          include("registrar.php");
-          break;
-        case "acompanhamento":
-          include("acompanhamento.php");
+        case "entrar":
+          include("entrar.php");
           break;
         case "perfil":
           include("perfil.php");
           break;
         
         default:
-          include("../includes/calendar.php");
           break;
 
       }
     } else {
-      include("../includes/principal.php");
+      include("template/entrar.php");
     }
-    ?>
-    <?php include("../includes/footer.php"); ?>
-
-  </main>
-  <?php include("../includes/scripts.php"); ?>
-  
-
+  ?>
 </body>
 
 </html>
