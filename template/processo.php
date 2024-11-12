@@ -347,25 +347,3 @@
 </body>
 
 </html>
-
-<?php
-if (!empty($_POST)) {
-    include "config.php";
-
-    $cliente = $_POST['cliente'];
-    $Horario = $_POST['horario'];
-    $NumProcesso = $_POST['numero_processo'];
-    $Vara = $_POST['vara'];
-    $data = $_POST['data'];
-
-    $sql = "INSERT INTO processos (cliente, horario, numero__processo, vara, data)
-    VALUES ('$cliente','$horario','$numProcesso','$vara','$data')";
-    $query = $mysqli->query($sql);
-
-    if ($query) {
-        echo "success";
-    } else {
-        echo "error";
-    }
-}
-?>
