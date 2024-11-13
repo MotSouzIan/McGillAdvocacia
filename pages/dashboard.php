@@ -24,8 +24,8 @@ include("head.php");
         case "funcionarios":
           include("scripts/funcionarios.php");
           break;
-        case "processos":
-          include("processos.php");
+        case "processo":
+          include("../template/scripts/processos.php");
           break;
         case "tarefas":
           include("scripts/tarefas.php");
