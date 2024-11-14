@@ -19,10 +19,10 @@ include("head.php");
     <?php if (isset($_GET["r"])) {
       switch ($_GET["r"]) {
         case "clientes":
-          include("scripts/clientes.php");
+          include("../template/scripts/clientes.php");
           break;
         case "funcionarios":
-          include("scripts/funcionarios.php");
+          include("../template/scripts/funcionarios.php");
           break;
         case "processo":
           include("../template/scripts/processos.php");
@@ -33,6 +33,9 @@ include("head.php");
         case "perfil":
           include("perfil.php");
           break;
+          case "entrar":
+            include("entrar.php");
+            break;
         
         default:
           break;
